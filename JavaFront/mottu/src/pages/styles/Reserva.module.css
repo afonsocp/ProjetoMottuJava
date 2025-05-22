@@ -1,0 +1,155 @@
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #f9fdfb;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  color: #2fa84f;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.description {
+  text-align: center;
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  color: #2fa84f;
+  font-size: 1.5rem;
+  margin: 40px 0 20px;
+  font-weight: 600;
+}
+
+.formGroup {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #222;
+  font-size: 1rem;
+}
+
+.input,
+.select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #2fa84f;
+}
+
+.button,
+.editButton,
+.deleteButton,
+.cancelButton,
+.confirmButton {
+  margin-top: 12px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.25s ease, transform 0.1s ease;
+}
+
+.button {
+  background-color: #2fa84f;
+  color: white;
+  font-weight: bold;
+}
+
+.editButton {
+  background-color: #1976D2;
+  color: white;
+  margin-left: 10px;
+}
+
+.deleteButton {
+  background-color: #e53935;
+  color: white;
+  margin-left: 10px;
+}
+
+.cancelButton {
+  background-color: #999;
+  color: white;
+  margin-left: 10px;
+}
+
+.confirmButton {
+  background-color: #43a047;
+  color: white;
+  margin-right: 10px;
+}
+
+.button:hover,
+.editButton:hover,
+.deleteButton:hover,
+.cancelButton:hover,
+.confirmButton:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.lista {
+  list-style: none;
+  padding-left: 0;
+}
+
+.item {
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.item strong {
+  color: #2fa84f;
+}
+
+.confirmModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: white;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.confirmModal p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333;
+}

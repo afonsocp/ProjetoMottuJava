@@ -1,0 +1,41 @@
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.statusDisponivel {
+  color: green;
+  font-weight: bold;
+}
+
+.statusEmUso {
+  color: orange;
+  font-weight: bold;
+}
+
+.statusManutencao {
+  color: red;
+  font-weight: bold;
+}

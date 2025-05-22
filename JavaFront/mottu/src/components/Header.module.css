@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2e7d32;
+  padding: 10px 16px;
+  color: white;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.logo {
+  height: 32px;
+}
+
+/* Menu lateral */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 240px;
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideMenu.open {
+  left: 0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.userAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+  border: 2px solid #2e7d32;
+}
+
+.userName {
+  font-weight: bold;
+  color: #2e7d32;
+  font-size: 1rem;
+}
+
+.sideMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  margin-top: 50px;
+}
+
+.sideMenu li {
+  margin-bottom: 30px;
+}
+
+.sideMenu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.sideMenu a:hover {
+  background-color: #e0f2e9;
+}
+
+/* Overlay para fechar menu clicando fora */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}

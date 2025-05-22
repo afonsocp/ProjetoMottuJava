@@ -1,0 +1,28 @@
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.motoCard {
+  background: #f9f9f9;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}

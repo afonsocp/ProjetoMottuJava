@@ -1,0 +1,147 @@
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #e9f7ef;
+}
+
+.loginSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.imageSection {
+  flex: 1;
+  background-image: url('/mottu-Login.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.formBox {
+  max-width: 400px;
+  width: 100%;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+.title {
+  text-align: center;
+  color: #2fa84f;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2e7d32;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #b2dfdb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.input:focus {
+  border-color: #2fa84f;
+  box-shadow: 0 0 0 3px rgba(47, 168, 79, 0.2);
+  outline: none;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #2fa84f, #1e7e34);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #1e7e34, #145a2c);
+}
+
+.separator {
+  text-align: center;
+  margin: 24px 0;
+  position: relative;
+  color: #888;
+}
+
+.separator::before,
+.separator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.separator::before {
+  left: 0;
+}
+
+.separator::after {
+  right: 0;
+}
+
+.infoText {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.link {
+  color: #2fa84f;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #145a2c;
+}
+
+.errorMessage {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 500;
+}
