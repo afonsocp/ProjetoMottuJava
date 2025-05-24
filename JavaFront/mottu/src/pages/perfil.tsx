@@ -9,10 +9,10 @@ export default function Perfil() {
   const [bio, setBio] = useState('');
   const [editando, setEditando] = useState(false);
   const [emailAntigo, setEmailAntigo] = useState('');
-  const [isClient, setIsClient] = useState(false); // <- Controle de renderização no client
+  const [isClient, setIsClient] = useState(false); 
 
   useEffect(() => {
-    setIsClient(true); // Habilita a renderização após carregar no cliente
+    setIsClient(true); 
     const usuario = JSON.parse(localStorage.getItem('usuario') || '{}');
     setNome(usuario.nome || '');
     setEmail(usuario.email || '');
@@ -58,7 +58,7 @@ export default function Perfil() {
     }
   };
 
-  // ⛔ Impede renderização no servidor
+  
   if (!isClient) return null;
 
   return (
