@@ -18,7 +18,7 @@
   height: 32px;
 }
 
-/* Menu lateral */
+
 .sideMenu {
   position: fixed;
   top: 0;
@@ -88,7 +88,7 @@
   background-color: #e0f2e9;
 }
 
-/* Overlay para fechar menu clicando fora */
+
 .overlay {
   position: fixed;
   top: 0;
