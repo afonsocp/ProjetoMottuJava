@@ -25,18 +25,17 @@ export default function CadastroMoto() {
   const [totalPaginas, setTotalPaginas] = useState(0);
   const [itensPorPagina, setItensPorPagina] = useState(5);
   
-  // Controle para evitar atualizações automáticas durante operações do usuário
+  
   const [atualizacaoAutomatica, setAtualizacaoAutomatica] = useState(true);
-  // Controle para forçar atualização após operações
   const [forcarAtualizacao, setForcarAtualizacao] = useState(false);
 
-  // Buscar motos quando a página carrega ou quando há mudanças
+  
   useEffect(() => {
     buscarMotos();
   }, [paginaAtual, itensPorPagina, atualizacaoAutomatica, forcarAtualizacao]);
 
   const buscarMotos = async () => {
-    // Se estiver editando ou realizando outra operação, não atualiza os dados
+    
     if (!atualizacaoAutomatica && !forcarAtualizacao) return;
     
     setCarregando(true);
@@ -52,7 +51,7 @@ export default function CadastroMoto() {
       setMotos(data.content || data);
       setTotalPaginas(data.totalPages || 1);
       
-      // Resetar o forçar atualização após buscar
+      
       if (forcarAtualizacao) {
         setForcarAtualizacao(false);
       }
@@ -68,13 +67,13 @@ export default function CadastroMoto() {
     e.preventDefault();
     setMensagem('');
     
-    // Validações básicas
+    
     if (!placa || !modelo || !ano || !status) {
       setMensagem('Todos os campos são obrigatórios!');
       return;
     }
     
-    // Desativa a atualização automática durante a operação
+    
     setAtualizacaoAutomatica(false);
     
     const moto = {
@@ -84,7 +83,7 @@ export default function CadastroMoto() {
       status,
     };
 
-    // Se estiver editando, inclui o ID
+    
     const dadosParaEnviar = editando 
       ? { ...moto, idMoto: editando.idMoto }
       : moto;
@@ -113,7 +112,7 @@ export default function CadastroMoto() {
       
       setMensagem(editando ? 'Moto atualizada com sucesso!' : 'Moto cadastrada com sucesso!');
       
-      // Atualiza a lista local com os dados retornados pela API
+      
       if (editando) {
         setMotos(prevMotos => 
           prevMotos.map(m => 
@@ -121,7 +120,7 @@ export default function CadastroMoto() {
           )
         );
       } else {
-        // Adiciona o novo item à lista
+       
         setMotos(prevMotos => [...prevMotos, dadosSalvos]);
       }
       
@@ -138,7 +137,7 @@ export default function CadastroMoto() {
   const handleExcluir = async (id: number) => {
     if (!confirm('Tem certeza que deseja excluir esta moto?')) return;
     
-    // Desativa a atualização automática durante a operação de exclusão
+    
     setAtualizacaoAutomatica(false);
     
     try {
@@ -152,17 +151,17 @@ export default function CadastroMoto() {
       
       setMensagem('Moto excluída com sucesso!');
       
-      // Atualiza o estado local imediatamente para refletir a exclusão
+      
       setMotos(prevMotos => 
         prevMotos.filter(m => m.idMoto !== id)
       );
       
-      // Se estiver editando o item que foi excluído, limpa o formulário
+      
       if (editando && editando.idMoto === id) {
         limparFormulario();
       }
       
-      // Reativa a atualização automática após um intervalo maior
+      
       setTimeout(() => {
         setForcarAtualizacao(true);
         setAtualizacaoAutomatica(true);
@@ -176,7 +175,7 @@ export default function CadastroMoto() {
   };
 
   const handleEditar = (moto: Moto) => {
-    // Desativa a atualização automática durante a edição
+    
     setAtualizacaoAutomatica(false);
     
     setEditando(moto);
