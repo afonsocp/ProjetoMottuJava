@@ -3,14 +3,14 @@
   margin: 40px auto;
   padding: 0 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #e8f5e9; /* verde claro */
+  background-color: #e8f5e9; 
   border-radius: 8px;
   box-shadow: 0 0 12px rgba(56, 142, 60, 0.3);
   min-height: 70vh;
 }
 
 .title {
-  color: #2e7d32; /* verde escuro */
+  color: #2e7d32; 
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
